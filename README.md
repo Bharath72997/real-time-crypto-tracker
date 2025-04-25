@@ -8,15 +8,14 @@ This project is a real-time cryptocurrency price tracker built using React and R
 
 1.  **Clone the repository:**
     ```bash
-    git clone <YOUR_REPOSITORY_URL>
+    git clone <https://github.com/Bharath72997/real-time-crypto-tracker/tree/main>
     ```
-    *(Replace `<YOUR_REPOSITORY_URL>` with the actual URL of your GitHub/GitLab repository)*
+  
 
 2.  **Navigate to the project directory:**
     ```bash
-    cd <YOUR_PROJECT_FOLDER>
-    ```
-    *(Replace `<YOUR_PROJECT_FOLDER>` with the name of your project folder)*
+    cd <fresh-crypto-tracker>
+  
 
 3.  **Install dependencies:**
     ```bash
@@ -63,8 +62,8 @@ The data flow is as follows:
 
 ## Demo
 
-[![Real-Time Crypto Price Tracker Demo](<YOUR_DEMO_VIDEO_THUMBNAIL_URL>)](<YOUR_DEMO_VIDEO_LINK>)
-*(Replace `<YOUR_DEMO_VIDEO_THUMBNAIL_URL>` with a link to a thumbnail of your demo video if you have one, otherwise you can leave it as is. Replace `<YOUR_DEMO_VIDEO_LINK>` with the actual URL of your demo video on YouTube, Loom, or another platform. If you created a GIF, you can embed it directly using `![Demo GIF](path/to/your/demo.gif)`)*
+(https://drive.google.com/file/d/1N0xoQKCbfuRLIvhMrshPWNQI1laoS0OL/view?usp=sharing)
+
 
 This demo showcases the real-time updating of cryptocurrency prices and other data, the responsive table layout adapting to different screen sizes, and the overall user interface.
 
