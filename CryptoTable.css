@@ -1,0 +1,130 @@
+.table-container {
+  overflow-x: auto;
+  border-radius: 12px; /* Even more rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* Slightly stronger, softer shadow */
+  background-color: #fff;
+  border: none; /* Remove the explicit border as the shadow provides definition */
+}
+
+table {
+  width: 100%;
+  border-collapse: separate; /* Allow spacing between cells for visual separation */
+  border-spacing: 0;
+}
+
+th {
+  background: linear-gradient(to bottom, #bbdefb, #e3f2fd); /* Light blue gradient header */
+  color: #1565c0; /* Darker blue header text */
+  font-weight: 600;
+  padding: 18px 24px; /* More padding */
+  text-align: left;
+  border-bottom: 2px solid #90caf9; /* More prominent bottom border for headers */
+  position: sticky; /* Keep headers visible on scroll (if needed) */
+  top: 0;
+  z-index: 1;
+  font-size: 1.1em;
+}
+
+td {
+  padding: 16px 24px; /* More padding */
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:last-child td {
+  border-bottom: none; /* Remove border from the last row */
+}
+
+tbody tr:hover {
+  background-color: #f0f8ff; /* Light blueish white on hover */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05); /* Subtle hover shadow */
+  transform: translateY(-1px); /* Slight lift on hover */
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+td[data-column="#"] {
+  width: 60px;
+  text-align: center;
+  color: #616161;
+}
+
+td[data-column="Logo"] {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+td[data-column="Name"] {
+  font-weight: 600; /* More emphasis on the name */
+  color: #212121; /* Darker text for names */
+}
+
+.positive {
+  color: #2e7d32; /* Deeper green */
+  font-weight: 600;
+}
+
+.negative {
+  color: #d32f2f; /* Deeper red */
+  font-weight: 600;
+}
+
+td[data-column="Market Cap"],
+td[data-column="24h Volume"],
+td[data-column="Circulating Supply"],
+td[data-column="Max Supply"],
+td[data-column="Price"] {
+  font-weight: 400;
+  color: #555;
+  font-size: 1.05em; /* Slightly larger numbers */
+}
+
+/* Style the Sparkline */
+td[data-column="7D Chart"] svg {
+  stroke: #1976d2; /* Stronger blue sparkline */
+  stroke-width: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  table thead {
+    display: none;
+  }
+
+  table tr {
+    display: block;
+    margin-bottom: 25px;
+    border: 1px solid #b3e5fc; /* Light blue border for blocks */
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  }
+
+  table td {
+    display: block;
+    text-align: right;
+    padding-left: 55%;
+    position: relative;
+    border-bottom: none;
+    color: #444;
+    font-size: 0.95em;
+  }
+
+  table td::before {
+    content: attr(data-column);
+    position: absolute;
+    left: 15px;
+    font-weight: 600;
+    color: #212121;
+  }
+
+  td[data-column="#"]::before {
+    color: #757575;
+  }
+
+  td[data-column="Logo"] {
+    align-items: center;
+    flex-direction: row; /* Keep logo and name in a row on smaller screens too */
+    gap: 15px;
+  }
+}
